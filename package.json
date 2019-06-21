@@ -1,0 +1,22 @@
+{
+  "name": "mate-jatek",
+  "version": "1.0.0",
+  "description": "Nagy játék lesz bástya",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wixon1337/mate-jatek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wixon1337/mate-jatek/issues"
+  },
+  "homepage": "https://github.com/wixon1337/mate-jatek#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
