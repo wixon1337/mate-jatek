@@ -40,10 +40,29 @@ const firstEncounter = (wep, prop) => {
   wep[prop] -= 10;
 };
 
+const fight = (enemy, damage, health, name, life, wep, mind, maxd) => {
+  while (enemy[health] >= 0) {
+    let command = readline.question('Mit szeretnél csinálni? 1: Támadás 2: Beszélgetés 3: Futás');
+    if (command === '1') {
+      console.log(enemy[name], 'health: ', enemy[health]);
+      let damage = Math.floor(Math.random() * (wep[maxd] - wep[mind] + 1) + wep[mind]);
+      console.log('-', damage, 'sebzés');
+      enemy[health] -= damage;
+      console.log('Maradt neki:', enemy[health]);
+      console.log(enemy[name], 'üt téged:');
+      console.log('-', enemy[damage]);
+      life -= enemy[damage];
+      console.log('Élet pontod maradt: ', life);
+    }
+  }
+  console.log('nyertél');
+};
+
 module.exports = {
   readline,
   getName,
   welcome,
   choseYourWeapon,
-  firstEncounter
+  firstEncounter,
+  fight
 };
